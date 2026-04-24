@@ -1,0 +1,67 @@
+/* ---- Products Page Styles ---- */
+
+.products-hero { padding-bottom: var(--space-3xl); }
+.product-line { padding: var(--space-4xl) 0; }
+.product-line-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: var(--space-2xl); flex-wrap: wrap; gap: var(--space-md);
+}
+.product-detail-card {
+  background: var(--color-white); border-radius: var(--radius-xl);
+  overflow: hidden; box-shadow: var(--shadow-lg); display: grid;
+  grid-template-columns: 1fr 1fr; transition: all var(--transition-base);
+}
+.product-detail-card:hover { box-shadow: var(--shadow-xl); }
+.product-detail-image {
+  background: linear-gradient(135deg, var(--color-cream), var(--color-cream-warm));
+  display: flex; align-items: center; justify-content: center; padding: var(--space-2xl);
+  min-height: 380px;
+}
+.product-detail-image img { max-height: 320px; object-fit: contain; }
+.product-detail-info { padding: var(--space-2xl); display: flex; flex-direction: column; justify-content: center; }
+.product-detail-info h3 { font-size: 1.8rem; margin-bottom: var(--space-sm); }
+.product-detail-info .product-tagline {
+  font-family: var(--font-heading); font-style: italic; color: var(--color-sage);
+  font-size: 1.05rem; margin-bottom: var(--space-lg);
+}
+.product-features { margin-bottom: var(--space-xl); }
+.product-features li {
+  padding: var(--space-sm) 0; font-size: 0.95rem; color: var(--color-gray-700);
+  display: flex; align-items: flex-start; gap: var(--space-sm);
+}
+.product-features li::before {
+  content: '✓'; color: var(--color-sage); font-weight: 700; flex-shrink: 0; margin-top: 1px;
+}
+
+/* Scalp Treatment */
+.scalp-section {
+  background: var(--color-cream); padding: var(--space-5xl) 0;
+}
+.scalp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center; }
+.scalp-benefits-list { display: grid; gap: var(--space-md); }
+.scalp-benefit-item {
+  display: flex; align-items: flex-start; gap: var(--space-md);
+  padding: var(--space-lg); background: var(--color-white);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+}
+.scalp-benefit-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: var(--color-sage); border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-white); font-size: 1.1rem;
+}
+
+/* Pro CTA Banner */
+.pro-cta-banner {
+  background: linear-gradient(135deg, var(--color-charcoal), var(--color-black));
+  padding: var(--space-3xl); border-radius: var(--radius-xl);
+  text-align: center; color: var(--color-white); margin-top: var(--space-4xl);
+}
+.pro-cta-banner h2 { color: var(--color-white); margin-bottom: var(--space-md); }
+.pro-cta-banner p { color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto var(--space-xl); }
+
+@media (max-width: 768px) {
+  .product-detail-card { grid-template-columns: 1fr; }
+  .product-detail-image { min-height: 280px; }
+  .scalp-grid { grid-template-columns: 1fr; }
+}

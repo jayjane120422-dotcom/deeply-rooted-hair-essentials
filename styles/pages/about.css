@@ -1,0 +1,59 @@
+/* ---- About Page Styles ---- */
+
+.about-story { padding: var(--space-5xl) 0; }
+.about-story .grid-2 { gap: var(--space-3xl); }
+.about-story-image {
+  border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+}
+.about-story-image img { width: 100%; height: 100%; object-fit: cover; }
+.about-story-content h2 { margin-bottom: var(--space-lg); }
+.about-story-content p { font-size: 1.05rem; line-height: 1.9; }
+
+/* Philosophy */
+.philosophy {
+  background: var(--color-cream); padding: var(--space-5xl) 0; text-align: center;
+}
+.philosophy-content { max-width: 800px; margin: 0 auto; }
+.scripture-block {
+  background: var(--color-white); border-radius: var(--radius-xl);
+  padding: var(--space-3xl); box-shadow: var(--shadow-md);
+  border: 1px solid rgba(122,139,111,0.15); position: relative;
+  margin-bottom: var(--space-2xl);
+}
+.scripture-block::before {
+  content: '🌿'; font-size: 2rem; display: block; margin-bottom: var(--space-md);
+}
+.scripture-quote {
+  font-family: var(--font-heading); font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-style: italic; color: var(--color-sage-dark); line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+.scripture-ref {
+  font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
+  color: var(--color-gold); letter-spacing: 1px;
+}
+.philosophy-text { font-size: 1.05rem; line-height: 1.9; text-align: left; }
+
+/* Values */
+.values { padding: var(--space-5xl) 0; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); }
+.value-card {
+  text-align: center; padding: var(--space-2xl);
+  border-radius: var(--radius-lg); background: var(--color-white);
+  box-shadow: var(--shadow-md); transition: all var(--transition-base);
+  border-top: 3px solid var(--color-gold);
+}
+.value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.value-icon {
+  width: 64px; height: 64px; margin: 0 auto var(--space-lg);
+  background: linear-gradient(135deg, var(--color-sage), var(--color-sage-dark));
+  border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: var(--color-white);
+}
+.value-card h3 { margin-bottom: var(--space-sm); font-size: 1.2rem; }
+.value-card p { font-size: 0.95rem; margin: 0; }
+
+@media (max-width: 768px) {
+  .values-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+}
