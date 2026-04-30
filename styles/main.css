@@ -163,6 +163,9 @@ p { margin-bottom: var(--space-md); color: var(--color-gray-700); }
 }
 .nav-logo span { color: var(--color-gold); }
 .navbar.scrolled .nav-logo { color: var(--color-white); }
+.navbar.scrolled .nav-logo-text { color: #FFFFFF !important; }
+.navbar.scrolled .nav-logo-text em,
+.navbar.scrolled .nav-logo-text span { color: var(--color-gold) !important; }
 .nav-links { display: flex; align-items: center; gap: var(--space-2xl); }
 .nav-links a {
   font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.85);
