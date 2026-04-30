@@ -151,8 +151,8 @@ p { margin-bottom: var(--space-md); color: var(--color-gray-700); }
   background: transparent;
 }
 .navbar.scrolled {
-  background: rgba(42, 54, 42, 0.97); backdrop-filter: blur(12px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  background: rgba(26, 26, 26, 0.98); backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
 }
 .navbar .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 .nav-logo {
@@ -175,8 +175,8 @@ p { margin-bottom: var(--space-md); color: var(--color-gray-700); }
 }
 .nav-links a:hover, .nav-links a.active { color: var(--color-white); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-.navbar.scrolled .nav-links a { color: rgba(255,255,255,0.85); font-weight: 500; }
-.navbar.scrolled .nav-links a:hover, .navbar.scrolled .nav-links a.active { color: var(--color-white); }
+.navbar.scrolled .nav-links a { color: rgba(255,255,255,0.9); font-weight: 600; }
+.navbar.scrolled .nav-links a:hover, .navbar.scrolled .nav-links a.active { color: var(--color-gold); }
 .nav-cta {
   padding: 0.6rem 1.6rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.85rem;
   background: var(--color-gold); color: var(--color-black);
