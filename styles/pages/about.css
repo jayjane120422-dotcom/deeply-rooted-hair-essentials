@@ -3,7 +3,7 @@
 /* Nav Logo Image */
 .nav-logo { display: flex; align-items: center; gap: 0.5rem; }
 .nav-logo-img { height: 42px; width: 42px; object-fit: contain; border-radius: 50%; background: #fff; padding: 3px; box-shadow: 0 0 0 2px var(--color-gold); }
-.nav-logo-text { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--color-dark); letter-spacing: -0.02em; }
+.nav-logo-text { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--color-white); letter-spacing: -0.02em; }
 .nav-logo-text span { color: var(--color-gold); }
 
 /* Logo Highlight Section */
