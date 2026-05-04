@@ -12,16 +12,29 @@
     .nav-logo-img{max-height:32px!important}
 
     /* ═══ HERO ═══ */
-    .sh{position:relative;padding:12rem 2rem 6rem;text-align:center;overflow:hidden;background:#1a1a14}
+    .sh{position:relative;padding:12rem 2rem 6rem;text-align:center;overflow:hidden;background:#1a1a14;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
     .sh::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(197,165,90,.2) 0%,transparent 60%)}
     .sh-particles{position:absolute;inset:0;overflow:hidden}
     .sh-p{position:absolute;width:3px;height:3px;background:rgba(197,165,90,.6);border-radius:50%;animation:shFloat 8s infinite ease-in-out}
     @keyframes shFloat{0%,100%{transform:translateY(0) scale(1);opacity:.3}50%{transform:translateY(-120px) scale(1.5);opacity:.8}}
-    .sh h1{font-family:var(--font-accent,'Cormorant Garamond',serif);font-size:clamp(2.5rem,6vw,4.5rem);font-weight:300;color:#fff;margin:0 0 .5rem;position:relative;z-index:1}
+    
+    /* Hero Side Images (Cutouts) */
+    .sh-side-img{position:absolute;bottom:0;z-index:2;pointer-events:none;max-height:85%;width:auto;opacity:0.9;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5))}
+    .sh-side-img.left{left:2%;transform:scaleX(-1); /* mirror if needed, or remove */}
+    .sh-side-img.right{right:2%}
+    
+    .sh-content{position:relative;z-index:3}
+    .sh h1{font-family:var(--font-accent,'Cormorant Garamond',serif);font-size:clamp(2.5rem,6vw,4.5rem);font-weight:300;color:#fff;margin:0 0 .5rem}
     .sh h1 em{color:#c5a55a;font-style:italic;background:linear-gradient(90deg,#c5a55a,#e8d5a0,#c5a55a);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shGold 3s linear infinite}
     @keyframes shGold{0%{background-position:0%}100%{background-position:200%}}
-    .sh p{color:rgba(255,255,255,.6);font-size:1rem;position:relative;z-index:1;max-width:450px;margin:0 auto 2rem}
-    .sh-line{width:60px;height:1px;background:linear-gradient(90deg,transparent,#c5a55a,transparent);margin:0 auto;position:relative;z-index:1}
+    .sh p{color:rgba(255,255,255,.6);font-size:1rem;max-width:450px;margin:0 auto 2rem}
+    .sh-line{width:60px;height:1px;background:linear-gradient(90deg,transparent,#c5a55a,transparent);margin:0 auto}
+
+    @media(max-width:900px){
+      .sh-side-img{opacity:0.3;max-height:60%}
+      .sh-side-img.left{left:-10%}
+      .sh-side-img.right{right:-10%}
+    }
 
     /* ═══ FEATURED ═══ */
     .sf{padding:5rem 2rem;background:linear-gradient(180deg,#faf7f2 0%,#f0ebe1 100%)}
@@ -115,9 +128,16 @@
   <!-- HERO -->
   <section class="sh">
     <div class="sh-particles" id="sh-particles"></div>
-    <h1>The <em>Collection</em></h1>
-    <p>Salon-grade Hair Botox treatments. Formulated with care, rooted in faith.</p>
-    <div class="sh-line"></div>
+    
+    <!-- Cutout Images -->
+    <img src="assets/images/founder-1.png" alt="" class="sh-side-img left" onerror="this.src='assets/images/jane-profile.png'">
+    <img src="assets/images/founder-4.png" alt="" class="sh-side-img right" onerror="this.src='assets/images/founder-3.png'">
+
+    <div class="sh-content">
+      <h1>The <em>Collection</em></h1>
+      <p>Salon-grade Hair Botox treatments. Formulated with care, rooted in faith.</p>
+      <div class="sh-line"></div>
+    </div>
   </section>
 
   <!-- PRODUCTS -->
