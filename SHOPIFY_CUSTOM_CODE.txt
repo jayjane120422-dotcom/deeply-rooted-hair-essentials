@@ -1,0 +1,154 @@
+<!-- DEEPLY ROOTED SHOPIFY CUSTOM PRODUCT GRID -->
+<!-- INSTRUCTIONS:
+1. Log in to your Shopify Admin.
+2. Go to Online Store > Themes.
+3. Click "Customize" on your current theme.
+4. On the left sidebar, click "Add section" and choose "Custom HTML" or "Custom Liquid".
+5. Copy all the code below and paste it into the HTML box.
+6. Click Save!
+-->
+
+<style>
+  /* Custom Styles for Deeply Rooted Products */
+  :root {
+    --dr-gold: #c5a55a;
+    --dr-gold-bright: #d4b76a;
+    --dr-sage-dark: #4a5e3a;
+    --dr-charcoal: #2c2c1e;
+    --dr-gray-700: #4a4a4a;
+  }
+  .dr-lineup-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 20px;
+  }
+  /* Card */
+  .dr-lineup-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+  }
+  .dr-lineup-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 24px 64px rgba(0,0,0,0.12), 0 0 0 1px rgba(197,165,90,0.2);
+  }
+  /* Badge */
+  .dr-lineup-badge {
+    position: absolute; top: 1rem; right: 1rem; z-index: 5;
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.2px; padding: 0.35rem 0.85rem; border-radius: 50px;
+  }
+  .dr-badge-gold { background: linear-gradient(135deg, var(--dr-gold), var(--dr-gold-bright)); color: #1a1a1a; }
+  .dr-badge-sage { background: linear-gradient(135deg, var(--dr-sage-dark), #5c6b4f); color: #fff; }
+  /* Image */
+  .dr-card-image {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    padding: 1.5rem 1.5rem 1rem; min-height: 180px;
+    background: linear-gradient(180deg, rgba(248,245,238,0.5) 0%, rgba(255,255,255,0) 100%);
+  }
+  .dr-card-image img { max-height: 160px; max-width: 100%; object-fit: contain; }
+  /* Content */
+  .dr-card-content { padding: 0 1.5rem 1.5rem; text-align: left; }
+  .dr-card-content h3 { font-size: 1.35rem; font-weight: 700; font-style: italic; color: var(--dr-charcoal); margin-top:0; margin-bottom: 0.5rem; }
+  /* Duration */
+  .dr-duration {
+    position: relative; background: #f0f0f0; border-radius: 50px; height: 26px; overflow: hidden; margin-bottom: 0.85rem;
+  }
+  .dr-duration-bar {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    background: linear-gradient(90deg, var(--dr-sage-dark), #7a8b6f); border-radius: 50px;
+  }
+  .dr-duration-text {
+    position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;
+    height: 100%; font-size: 0.75rem; font-weight: 500; color: var(--dr-charcoal);
+  }
+  /* Features */
+  .dr-features { list-style: none; padding: 0; margin: 0 0 1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  .dr-features li { position: relative; padding-left: 1.2rem; font-size: 0.8rem; color: var(--dr-gray-700); line-height: 1.4; }
+  .dr-features li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--dr-sage-dark); font-weight: 700; font-size: 0.8rem; }
+  /* Button */
+  .dr-btn {
+    display: block; width: 100%; text-align: center; font-size: 0.8rem; padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c); color: #c5a55a; border-radius: 50px;
+    text-transform: uppercase; letter-spacing: 1px; font-weight: 700; text-decoration: none; transition: 0.3s;
+  }
+  .dr-btn:hover { background: linear-gradient(135deg, var(--dr-gold), var(--dr-gold-bright)); color: #1a1a1a; }
+  
+  /* Responsive */
+  @media (max-width: 950px) { .dr-lineup-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .dr-lineup-grid { grid-template-columns: 1fr; } }
+</style>
+
+<div class="dr-lineup-grid">
+  <!-- Cynty -->
+  <div class="dr-lineup-card">
+    <div class="dr-lineup-badge dr-badge-gold">Bestseller</div>
+    <div class="dr-card-image">
+      <img src="https://lightandsalt413.github.io/deeplyrooted/assets/images/product-cynty-raw.png" alt="Cynty Hair Botox">
+    </div>
+    <div class="dr-card-content">
+      <h3>Cynty</h3>
+      <div class="dr-duration">
+        <div class="dr-duration-bar" style="width: 50%"></div>
+        <span class="dr-duration-text">Lasts up to <strong>3 months</strong></span>
+      </div>
+      <ul class="dr-features">
+        <li>Frizz solution</li>
+        <li>Keratin & collagen infusion</li>
+        <li>Silky, manageable hair</li>
+      </ul>
+      <a href="/products/hair-botox-cynty" class="dr-btn">Shop Now</a>
+    </div>
+  </div>
+
+  <!-- Michelle -->
+  <div class="dr-lineup-card">
+    <div class="dr-lineup-badge dr-badge-sage">Pro Choice</div>
+    <div class="dr-card-image">
+      <img src="https://lightandsalt413.github.io/deeplyrooted/assets/images/product-michelle-raw.png" alt="Michelle Hair Botox">
+    </div>
+    <div class="dr-card-content">
+      <h3>Michelle</h3>
+      <div class="dr-duration">
+        <div class="dr-duration-bar" style="width: 75%"></div>
+        <span class="dr-duration-text">Lasts up to <strong>5 months</strong></span>
+      </div>
+      <ul class="dr-features">
+        <li>60% straighter hair</li>
+        <li>Frizz solution</li>
+        <li>Hair restoration</li>
+      </ul>
+      <a href="/products/untitled-apr2_02-59" class="dr-btn">Shop Now</a>
+    </div>
+  </div>
+
+  <!-- Scalp Care -->
+  <div class="dr-lineup-card">
+    <div class="dr-lineup-badge dr-badge-sage">Scalp Care</div>
+    <div class="dr-card-image">
+      <img src="https://lightandsalt413.github.io/deeplyrooted/assets/images/product-scalp-treatment.png" alt="Scalp Treatment">
+    </div>
+    <div class="dr-card-content">
+      <h3>Scalp Renewal Treatment</h3>
+      <div class="dr-duration">
+        <div class="dr-duration-bar" style="width: 60%"></div>
+        <span class="dr-duration-text"><strong>Salon-Grade</strong> Formula</span>
+      </div>
+      <ul class="dr-features">
+        <li>Promotes hair growth</li>
+        <li>Strengthens roots</li>
+        <li>Detoxifies scalp</li>
+        <li>4 oz (118 mL)</li>
+      </ul>
+      <a href="/products/deeply-rooted-scalp-treatment" class="dr-btn">Shop Now</a>
+    </div>
+  </div>
+</div>
